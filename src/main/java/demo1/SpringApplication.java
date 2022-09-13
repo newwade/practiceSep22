@@ -15,7 +15,7 @@ public class SpringApplication {
         SpeakerService speakerService = context.getBean("speakerService",SpeakerServiceImpl.class);
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
-        Speaker speaker = speakerService.addSpeaker(1,"mike",date,time);
-        System.out.println(speaker. getId()+" "+speaker.getName());
+        Speaker speaker = speakerService.addSpeaker(1,"lawson",date,time);
+        System.out.println(speaker. getId()+": "+speaker.getName()+" "+speaker.getSesssionDate());
     }
 }

@@ -1,6 +1,7 @@
 package demo1.service;
 
 import demo1.model.Speaker;
+import demo1.repository.SpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,32 +10,29 @@ import java.time.LocalTime;
 
 @Service("speakerService")
 public class SpeakerServiceImpl implements SpeakerService {
-    private Speaker speaker;
+    private SpeakerRepository speakerRepository;
 
-    public Speaker getSpeaker() {
-        return speaker;
+    public SpeakerRepository getSpeaker() {
+        return speakerRepository;
     }
 
-    public void setSpeaker(Speaker speaker) {
+    public void setSpeaker(SpeakerRepository speakerRepository) {
         System.out.println("setter based injection");
-        this.speaker = speaker;
+        this.speakerRepository = speakerRepository;
     }
 
     public SpeakerServiceImpl(){
     }
 
     @Autowired
-    public SpeakerServiceImpl(Speaker speaker) {
+    public SpeakerServiceImpl(SpeakerRepository speakerRepository) {
         System.out.println("Constructor based injection");
-        this.speaker = speaker;
+        this.speakerRepository = speakerRepository;
     }
 
     @Override
     public Speaker addSpeaker(long id, String name, LocalDate date, LocalTime time){
-        speaker.setId(id);
-        speaker.setName(name);
-        speaker.setSesssionDate(date);
-        speaker.setSessionTime(time);
+        Speaker speaker = speakerRepository.addSpeaker(id,name,date,time);
         return speaker;
     }
 

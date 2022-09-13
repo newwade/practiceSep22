@@ -1,6 +1,8 @@
 package demo1;
 
 import demo1.model.Speaker;
+import demo1.repository.SpeakerRepository;
+import demo1.repository.SpeakerRepositoryImpl;
 import demo1.service.SpeakerService;
 import demo1.service.SpeakerServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +18,12 @@ public class AppConfig {
 //        SpeakerServiceImpl speakerService = new SpeakerServiceImpl();
 //        return speakerService;
 //    }
+
+//      @Bean(name="speakerRepository")
+//    public SpeakerRepository getSpeakerRepository(){
+//          SpeakerRepositoryImpl speakerRepository = new SpeakerRepositoryImpl();
+//          return speakerRepository;
+//      }
 
 //    @Bean(name = "speaker")
 //    public Speaker getSpeaker(){

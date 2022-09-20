@@ -1,0 +1,17 @@
+{
+	"label": "File Details",
+	"description": "Provides actions to get details of files",
+	"GetFileDetails.label": "File Size",
+	"GetFileDetails.description": "Returns file size in bytes",
+	"GetFileDetails.node_label": "File size in bytes",
+	"GetFileDetails.return_label": "Returns file size",
+	"GetFileDetails.return_label_description": "Assign the output to a variable",
+	"GetFileDetails.filePath.label": "Select a file for analysis",
+	"SplitString.label": "Splits the string",
+	"SplitString.description": "Returns list separated by delimiter",
+	"SplitString.node_label": "list separated by delimiter",
+	"SplitString.return_label": "Returns list",
+	"SplitString.return_label_description": "Assign the output to a variable",
+	"SplitString.string.label": "Source string",
+	"SplitString.delimiter.label": "Delimiter"
+}
